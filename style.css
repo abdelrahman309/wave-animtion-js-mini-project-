@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3a3a80, #242454);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.form_container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  color: #fff;
+}
+
+.form_container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.form-controller {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background: transparent;
+  padding: 12px 0;
+  color: #fff;
+  font-size: 1rem;
+}
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background: #00a2cc;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00c6ff;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  display: flex;
+}
+
+label span {
+  display: inline-block;
+  transform: translateY(0px);
+  transition: transform 0.4s ease, color 0.4s ease;
+  transition-delay: calc(var(--i) * 50ms);
+}
+
+/* التأثير عند الكتابة أو التركيز */
+input:focus + label span,
+input:not(:placeholder-shown) + label span {
+  transform: translateY(-30px);
+  color: #00c6ff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #00c6ff;
+}
